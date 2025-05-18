@@ -1,0 +1,117 @@
+/* === Colors === */
+:root {
+    --white_100: rgba(255, 255, 255, 1);
+    --white_64: rgba(255, 255, 255, 0.64);
+    --white_24: rgba(255, 255, 255, 0.24);
+    --light_grey_100: rgba(249, 251, 252, 1);
+    --blue_100: rgba(80, 70, 228, 1);
+    --black_100: rgba(21, 21, 34, 1);
+    --black_64: rgba(21, 21, 34, 0.64);
+    --black_24: rgba(21, 21, 34, 0.24);
+    --blue_gradient: linear-gradient(
+        45deg,
+        rgba(122, 59, 237, 1) 0%,
+        rgba(80, 70, 228, 1) 100%
+    );
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/* === Card Base === */
+.card {
+    width: 100%;
+    max-width: 16rem;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    background-color: var(--light_grey_100);
+    color: var(--black_100);
+}
+
+/* === Popular Modifier === */
+.card.popular {
+    background-image: var(--blue_gradient);
+    color: var(--white_100);
+}
+
+/* === Inner Structure === */
+.nameWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.priceNumber {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.verticalDivider {
+    height: 1.25rem;
+    width: 0.125rem;
+    border-radius: 1px;
+    background-color: var(--black_24);
+}
+
+.priceMonth {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--black_64);
+}
+
+.tarifName {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.horrizontalDivider {
+    height: 0.125rem;
+    width: 40%;
+    border-radius: 1px;
+    background-color: var(--black_24);
+}
+
+.speedWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.speedValue {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.speedDescription {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: var(--black_64);
+    text-align: left;
+}
+
+/* === Popular Overrides === */
+.card.popular .priceMonth,
+.card.popular .speedDescription {
+    color: var(--white_64);
+}
+
+.card.popular .verticalDivider,
+.card.popular .horrizontalDivider {
+    background-color: var(--white_24);
+}

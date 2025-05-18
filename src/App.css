@@ -1,0 +1,35 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#root {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cardsAlignment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pageName {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+}
+
+.pageDescription {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
