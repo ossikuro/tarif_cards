@@ -6,6 +6,9 @@ import './components/reset.css'
 import './components/normalize.css'
 
 function App() {
+    const [selectedId, setSelectedId] = useState(null)
+    const [hoverId, setHoverId] = useState(null)
+
     return (
         <>
             <div className="pageName">
@@ -16,7 +19,15 @@ function App() {
             </div>
             <div className="cardsAlignment">
                 {tarifs.map((tarif) => (
-                    <TarifCard key={tarif.id} {...tarif} />
+                    <TarifCard
+                        key={tarif.id}
+                        {...tarif}
+                        selected={tarif.id === selectedId}
+                        hover={tarif.id === hoverId}
+                        onSelect={() => setSelectedId(tarif.id)}
+                        onHoverEnter={() => setHoverId(tarif.id)}
+                        onHoverLeave={() => setHoverId(null)}
+                    />
                 ))}
             </div>
         </>
