@@ -1,4 +1,4 @@
-import styles from './tarifCard.module.css'
+import styles from '../../styles/tarifCard.module.css'
 
 export default function TarifCard({
     name,
